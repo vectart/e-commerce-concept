@@ -1,0 +1,41 @@
+.product-details {
+  .transition;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-125%);
+  background: white;
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  div {
+    flex: 1;
+    display: flex;
+    border-top: 1px solid @border-color;
+    border-bottom: 4px solid @red;
+  }
+
+  span {
+    background: no-repeat center;
+    background-size: contain;
+    background-origin: content-box;
+    padding: 30px;
+    flex: 1;
+  }
+
+  aside {
+    width: 240px;
+    border-left: 1px solid @border-color;
+    text-align: center;
+  }
+
+  b {
+    font-weight: bold;
+    font-size: 24px;
+    display: block;
+    padding: 30px;
+    color: @red;
+  }
+}

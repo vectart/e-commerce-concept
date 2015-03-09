@@ -8,7 +8,10 @@ Ember.MODEL_FACTORY_INJECTIONS = true;
 var App = Ember.Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
-  Resolver: Resolver
+  Resolver: Resolver,
+  ready: function () {
+    this.intl.set('locales', ['en-US']);
+  }
 });
 
 loadInitializers(App, config.modulePrefix);

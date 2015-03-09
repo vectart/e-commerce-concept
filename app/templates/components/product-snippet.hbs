@@ -1,0 +1,5 @@
+{{#link-to 'product' product.id}}
+  <span {{bind-attr style=style}}></span>
+  <h5>{{product.name}}</h5>
+  <b>{{format-number product.price style="currency" currency="USD"}}</b>
+{{/link-to}}

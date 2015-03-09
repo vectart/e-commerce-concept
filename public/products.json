@@ -1,0 +1,64 @@
+[
+  {
+    "id": "w",
+    "name": "W Lounge Chair in Orange Tweed",
+    "price": 875,
+    "wide": true
+  },
+  {
+    "id": "artemis",
+    "name": "Artemis Lounge Chair",
+    "price": 900
+  },
+  {
+    "id": "egg",
+    "name": "Egg Chair In Leather by Lemoderno",
+    "price": 635
+  },
+  {
+    "id": "limelight",
+    "name": "Limelight Chair",
+    "price": 1322
+  },
+  {
+    "id": "rocker",
+    "name": "Rocker Lounge Chair",
+    "price": 123
+  },
+  {
+    "id": "ava",
+    "name": "Ava Arm Chair",
+    "price": 989,
+    "wide": true
+  },
+  {
+    "id": "goldside",
+    "name": "Gold Side Chair with Gold Wire Base",
+    "price": 540
+  },
+  {
+    "id": "risom",
+    "name": "Risom Lounge Chair With Arms",
+    "price": 1270
+  },
+  {
+    "id": "custom",
+    "name": "Custom Lounge Chair",
+    "price": 1895
+  },
+  {
+    "id": "rocket",
+    "name": "Rocket Occasional Chair",
+    "price": 169
+  },
+  {
+    "id": "aspen",
+    "name": "Aspen Chair in Beige Linen",
+    "price": 447
+  },
+  {
+    "id": "baxton",
+    "name": "Baxton Studio Levison Gray Linen Modern Accent Chair",
+    "price": 340
+  }
+]

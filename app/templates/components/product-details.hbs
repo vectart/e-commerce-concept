@@ -1,0 +1,8 @@
+<h3>{{product.name}}</h3>
+<div>
+  <span {{bind-attr style=style}}></span>
+  <aside>
+    <b>{{format-number product.price style="currency" currency="USD"}}</b>
+    <button>Add to Cart</button>
+  </aside>
+</div>

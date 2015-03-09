@@ -1,0 +1,160 @@
+html,
+body,
+main {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: #222;
+  text-rendering: geometricPrecision;
+  background: #f5f5f3;
+  cursor: default;
+}
+main {
+  display: flex;
+  box-sizing: border-box;
+}
+header {
+  width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 0;
+}
+
+h3 {
+  font-size: 28px;
+  text-align: center;
+  font-weight: bold;
+  padding: 30px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+a {
+  .transition(@duration: 0.4s);
+  color: @red;
+}
+
+.logo {
+  background: @red;
+  color: white;
+  display: block;
+  text-decoration: none;
+  padding: 10px 20px;
+  line-height: 140%;
+  border: 4px solid @red;
+  box-shadow: inset 0 0 0 1px white;
+}
+
+#cart {
+  .transition(@duration: 0.4s);
+  width: 80px;
+
+  main.cart & {
+    width: 360px;
+  }
+}
+
+#store {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+
+  .back {
+    .transition;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    z-index: 80;
+    display: flex;
+    justify-content: center;
+    color: inherit;
+    text-decoration: none;
+    transform: translateX(-100%);
+    opacity: 0;
+    padding-top: 20px;
+
+    i {
+      .transition(@duration: 0.4s);
+    }
+
+    &:hover i {
+      color: @red;
+    }
+
+    main.product & {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+#category {
+  .transition;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 50;
+  overflow: hidden;
+  box-shadow: 0 0 10px fade(black, 20%);
+  background: white;
+
+  main.product & {
+    pointer-events: none;
+    transform: translateX(-80%);
+    opacity: 0.5;
+  }
+}
+
+#products {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -1px;
+  border-top: 1px solid @border-color;
+  overflow: auto;
+  flex: 1;
+
+  .product-snippet.wide {
+    width: 50%;
+  }
+}
+
+#product {
+  .transition;
+  display: flex;
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(125%);
+  z-index: 40;
+  overflow: hidden;
+
+  main.product & {
+    transform: translateX(25%);
+  }
+}
+
+button {
+  .transition(@duration: 0.4s);
+  color: white;
+  background: #222;
+  font: inherit;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: 0 none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background-color: @red;
+  }
+}

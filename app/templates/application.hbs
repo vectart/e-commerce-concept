@@ -1,3 +1,29 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<header>
+  {{#link-to 'index' class='logo'}}
+    C H A I R S<br/>
+    F O R<br/>
+    H O M E
+  {{/link-to}}
+</header>
 
-{{outlet}}
+<article id="store">
+  <section id="category">
+    <h3>Mid-Century Chairs</h3>
+    <ul id="products">
+      {{#each product in model}}
+        {{product-snippet product=product}}
+      {{/each}}
+    </ul>
+  </section>
+  <section id="product">
+    {{outlet}}
+  </section>
+  {{#link-to 'index' class='back'}}
+    {{material-design-icon name='apps' size='3x'}}
+  {{/link-to}}
+</article>
+
+<article id="cart" {{action 'toggleCart'}}>
+  {{material-design-icon name='shopping-cart' size='3x'}}
+</article>
+
