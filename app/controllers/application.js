@@ -10,6 +10,9 @@ export default Ember.Controller.extend({
   actions: {
     toggleCart: function () {
       this.toggleProperty('expandCart');
+    },
+    hideCart: function () {
+      this.set('expandCart', false);
     }
   }
 });

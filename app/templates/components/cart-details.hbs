@@ -1,4 +1,4 @@
-<h4 {{action 'toggle'}}>
+<h4>
   {{material-design-icon name='shopping-cart' size='3x'~}}
   <span>Shopping cart</span>
 </h4>
@@ -8,3 +8,9 @@
     {{cart-item item=item}}
   {{/each}}
 </ul>
+
+{{#if cart.length}}
+  <p>
+    {{format-number cart.total}}
+  </p>
+{{/if}}

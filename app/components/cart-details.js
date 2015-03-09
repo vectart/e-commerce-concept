@@ -7,9 +7,7 @@ export default Ember.Component.extend({
   layout: layout,
   classNames: ['cart-details'],
 
-  actions: {
-    toggle: function () {
-      this.sendAction();
-    }
+  click: function () {
+    this.sendAction();
   }
 });

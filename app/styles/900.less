@@ -11,4 +11,33 @@ and (max-width: 900px) {
     }
   }
 
+  h3 {
+    font-size: 18px;
+    padding: 20px;
+    text-align: right;
+    line-height: 24px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+
+  .product-details {
+    div {
+      flex-direction: column;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+
+      aside {
+        order: 1;
+        width: auto;
+      }
+
+      span {
+        order: 2;
+        min-height: 480px;
+      }
+    }
+  }
+
 }

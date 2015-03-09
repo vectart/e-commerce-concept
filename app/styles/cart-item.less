@@ -1,6 +1,7 @@
 .cart-item {
   padding: 0 15px 15px;
   overflow: hidden;
+  cursor: pointer;
 
   span {
     .transition;
@@ -13,10 +14,52 @@
     border-radius: 50px;
     border: 1px solid @border-color;
     float: left;
-    margin-right: 15px;
+    transform: translateX(0) rotate(0deg);
   }
 
-  &.is-hidden span {
-    transform: translateX(-150%) rotate(-180deg);
+  h6 {
+    .transition;
+    padding: 10px 0 5px;
+    margin-left: 65px;
+    transform: translateX(0);
+  }
+
+  b {
+    .transition;
+    display: block;
+    font-weight: bold;
+    border-bottom: 1px solid @border-color;
+    margin-left: 65px;
+    padding-bottom: 10px;
+    transform: translateX(0);
+  }
+
+  del {
+    .transition;
+    float: right;
+    margin-top: 0;
+    color: @red;
+    font-size: 18px;
+    opacity: 1;
+    transform: translateX(-235px);
+
+    main.cart & {
+      transform: translateX(0);
+    }
+  }
+
+  &.is-hidden {
+    span {
+      transform: translateX(-80px) rotate(-180deg);
+    }
+
+    h6,
+    b {
+      transform: translateX(100%);
+    }
+
+    del {
+      opacity: 0;
+    }
   }
 }
