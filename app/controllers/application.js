@@ -4,7 +4,7 @@ export default Ember.Controller.extend({
   expandCart: false,
 
   routeChanged: function () {
-    this.set('expandCart', true);
+    this.set('expandCart', false);
   }.observes('currentPath'),
 
   actions: {
