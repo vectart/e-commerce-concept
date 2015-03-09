@@ -1,8 +1,12 @@
 <h3>{{product.name}}</h3>
 <div>
-  <span {{bind-attr style=style}}></span>
+  {{product-image slug=product.id}}
   <aside>
     <b>{{format-number product.price}}</b>
-    <button {{action 'addToCart'}}>Add to Cart</button>
+    {{#unless inCart}}
+      <button {{action 'addToCart'}}>{{material-design-icon name='add-shopping-cart' tagName='i'}} Add to Cart</button>
+    {{else}}
+      <button {{action 'showCart'}}>{{material-design-icon name='done' tagName='i'}} Show Cart</button>
+    {{/unless}}
   </aside>
 </div>

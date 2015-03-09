@@ -6,7 +6,7 @@ export default Ember.Route.extend({
 
   model: function (params) {
     return this.get('products').then(function (products) {
-      this.get('cart').addObject(products.findBy('id', params.id));
+      // this.get('cart').addObject(products.findBy('id', params.id));
       return products.findBy('id', params.id);
     }.bind(this));
   },
@@ -20,5 +20,11 @@ export default Ember.Route.extend({
 
   teardownViews: function () {
     this.set('controller.isActive', false);
+  },
+
+  actions: {
+    showCart: function () {
+      this.controllerFor('application').set('expandCart', true);
+    }
   }
 });

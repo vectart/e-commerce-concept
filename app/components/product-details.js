@@ -6,15 +6,18 @@ export default Ember.Component.extend({
 
   layout: layout,
   classNames: ['product-details'],
-  classNameBindings: ['isActive:active'],
+  classNameBindings: ['isActive:active', 'inCart'],
 
-  style: function () {
-    return 'background-image: url("/img/%@.jpg")'.fmt(this.get('product.id'));
-  }.property('product.id'),
+  inCart: function () {
+    return this.get('cart').contains(this.get('product'));
+  }.property('cart.@each', 'product'),
 
   actions: {
     addToCart: function () {
       this.get('cart').addObject(this.get('product'));
+    },
+    showCart: function () {
+      this.sendAction('showCart');
     }
   }
 });

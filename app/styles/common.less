@@ -2,6 +2,7 @@ html,
 body,
 main {
   height: 100%;
+  width: 100%;
   overflow: hidden;
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   font-size: 15px;
@@ -69,8 +70,6 @@ a {
   width: 320px;
   height: 100%;
   transform: translateX(-80px);
-  box-sizing: border-box;
-  border-bottom: 4px solid darken(@border-color, 20%);
 
   main.cart & {
     transform: translateX(-320px);
@@ -86,6 +85,7 @@ a {
   overflow: hidden;
   position: relative;
   margin-right: 80px;
+  border-left: 1px solid @border-color;
 
   .back {
     .transition;
@@ -134,6 +134,7 @@ a {
   overflow: hidden;
   box-shadow: 0 0 10px fade(black, 20%);
   background: white;
+  border-right: 1px solid @border-color;
 
   h3 {
     .transition;
@@ -147,15 +148,13 @@ a {
       opacity: 0;
     }
 
-    #products {
-      opacity: 0.4;
-    }
   }
 }
 
 #products {
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-start;
   margin-right: -1px;
   border-top: 1px solid @border-color;
   overflow-y: scroll;
@@ -183,14 +182,9 @@ a {
   width: 80%;
   height: 100%;
   top: 0;
-  left: 0;
-  transform: translateX(125%);
+  left: 20%;
   z-index: 40;
   overflow: hidden;
-
-  main.product & {
-    transform: translateX(25%);
-  }
 }
 
 button {
