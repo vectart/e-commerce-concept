@@ -1,8 +1,8 @@
 <header>
   {{#link-to 'index' class='logo'}}
-    C H A I R S<br/>
-    F O R<br/>
-    H O M E
+    Chairs<br/>
+    For<br/>
+    Home
   {{/link-to}}
 </header>
 
@@ -19,11 +19,11 @@
     {{outlet}}
   </section>
   {{#link-to 'index' class='back'}}
-    {{material-design-icon name='apps' size='3x'}}
+    {{material-design-icon name='chevron-left' size='4x'}}
   {{/link-to}}
 </article>
 
-<article id="cart" {{action 'toggleCart'}}>
-  {{material-design-icon name='shopping-cart' size='3x'}}
+<article id="cart">
+  {{cart-details action='toggleCart'}}
 </article>
 

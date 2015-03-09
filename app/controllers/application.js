@@ -1,15 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  cart: false,
+  expandCart: false,
 
   routeChanged: function () {
-    this.set('cart', false);
+    this.set('expandCart', true);
   }.observes('currentPath'),
 
   actions: {
     toggleCart: function () {
-      this.toggleProperty('cart');
+      this.toggleProperty('expandCart');
     }
   }
 });

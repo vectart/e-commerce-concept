@@ -1,0 +1,33 @@
+.cart-details {
+
+  h4 {
+    .transition(@duration: 0.4s);
+    padding: 15px 0;
+    line-height: 60px;
+    cursor: pointer;
+
+    span {
+      vertical-align: middle;
+      display: inline-block;
+      line-height: 100%;
+
+      &:first-of-type {
+        width: 80px;
+        text-align: center;
+      }
+
+      &:last-of-type {
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+
+    &:hover {
+      color: @red;
+    }
+  }
+
+  ul {
+    border-top: 1px solid @border-color;
+  }
+}
