@@ -15,10 +15,10 @@
           <ins {{bind-attr class="isList::selected"}} {{action 'showGrid'}}>{{material-design-icon name='view-module' size='2x'}}</ins>{{!--
           --}}<ins {{bind-attr class="isList:selected"}} {{action 'showList'}}>{{material-design-icon name='view-headline' size='2x'}}</ins>
         </li>
-        <li><input type="search" placeholder="Filter chairs by name..." /></li>
+        <li>{{input value=keyword type='search' placeholder='Filter chairs by name...'}}</li>
       </ul>
       <ul id="products">
-        {{#each product in model}}
+        {{#each product in filteredProducts}}
           {{product-snippet product=product}}
         {{/each}}
       </ul>

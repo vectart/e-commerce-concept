@@ -11,6 +11,7 @@
     "ember-qunit": "0.2.8",
     "ember-qunit-notifications": "0.0.7",
     "qunit": "~1.17.1",
-    "fastclick": "~1.0.6"
+    "fastclick": "~1.0.6",
+    "fuse.js": "~1.2.2"
   }
 }

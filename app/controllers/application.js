@@ -1,8 +1,19 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  products: Ember.inject.service(),
+
   expandCart: false,
-  isList: true,
+  isList: false,
+  keyword: '',
+
+  filteredProducts: function () {
+    if (this.get('keyword')) {
+      return this.get('products').search(this.get('keyword'));
+    }
+
+    return this.get('model');
+  }.property('keyword', 'model.@each'),
 
   routeChanged: function () {
     this.set('expandCart', false);
