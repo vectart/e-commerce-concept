@@ -6,16 +6,16 @@
   {{/link-to}}
 </header>
 
-<article id="store">
+<article id="store" {{bind-attr class="isList"}}>
   <section id="category">
     <h3>Mid-Century Chairs</h3>
     <div class="scrollable">
       <ul id="panel">
         <li>
-          <span>{{material-design-icon name='view-module' size='4x'}}</span>
-          <span>{{material-design-icon name='view-headline' size='4x'}}</span>
+          <ins {{bind-attr class="isList::selected"}} {{action 'showGrid'}}>{{material-design-icon name='view-module' size='2x'}}</ins>{{!--
+          --}}<ins {{bind-attr class="isList:selected"}} {{action 'showList'}}>{{material-design-icon name='view-headline' size='2x'}}</ins>
         </li>
-        <li><input type="search" /></li>
+        <li><input type="search" placeholder="Filter chairs by name..." /></li>
       </ul>
       <ul id="products">
         {{#each product in model}}

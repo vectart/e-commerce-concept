@@ -182,6 +182,47 @@ a {
   }
 }
 
+#panel {
+  border-bottom: 1px solid @border-color;
+  display: flex;
+
+  ins {
+    .transition(@duration: 0.4s);
+    display: inline-block;
+    border-right: 1px solid @border-color;
+    padding: 10px;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+
+    &:hover {
+      color: @red;
+    }
+
+    &.selected {
+      cursor: default;
+      background: #f5f5f3;
+      color: inherit;
+    }
+  }
+
+  input {
+    border: 0 none;
+    width: 100%;
+    height: 52px;
+    padding: 10px;
+    box-sizing: border-box;
+    font: inherit;
+    font-size: 13px;
+  }
+
+  li {
+    &:last-of-type {
+      flex: 1;
+    }
+  }
+}
+
 #products {
   display: flex;
   flex-wrap: wrap;
@@ -200,6 +241,43 @@ a {
   main.product & {
     overflow-y: hidden;
     -webkit-overflow-scrolling: none;
+  }
+
+  .is-list & {
+    flex-direction: column;
+
+    .product-snippet {
+      width: 100%;
+
+      a {
+        display: flex;
+        align-items: center;
+        padding: 5px 20px 5px 10px;
+
+        h5 {
+          padding: 0;
+          flex: 10;
+          text-align: left;
+          padding-left: 10px;
+        }
+
+        b {
+          padding: 0;
+          flex: 1;
+          text-align: right;
+        }
+
+        span {
+          width: 50px;
+          height: 50px;
+          flex: 0 0 50px;
+        }
+
+        &:after {
+          display: none;
+        }
+      }
+    }
   }
 }
 
