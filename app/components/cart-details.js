@@ -5,7 +5,7 @@ export default Ember.Component.extend({
   cart: Ember.inject.service(),
 
   layout: layout,
-  classNames: ['cart-details'],
+  classNames: ['cart-details', 'scrollable'],
 
   click: function () {
     this.sendAction();

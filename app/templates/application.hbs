@@ -9,11 +9,20 @@
 <article id="store">
   <section id="category">
     <h3>Mid-Century Chairs</h3>
-    <ul id="products">
-      {{#each product in model}}
-        {{product-snippet product=product}}
-      {{/each}}
-    </ul>
+    <div class="scrollable">
+      <ul id="panel">
+        <li>
+          <span>{{material-design-icon name='view-module' size='4x'}}</span>
+          <span>{{material-design-icon name='view-headline' size='4x'}}</span>
+        </li>
+        <li><input type="search" /></li>
+      </ul>
+      <ul id="products">
+        {{#each product in model}}
+          {{product-snippet product=product}}
+        {{/each}}
+      </ul>
+    </div>
   </section>
   <section id="product">
     {{outlet}}

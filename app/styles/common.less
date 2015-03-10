@@ -63,6 +63,15 @@ a {
   }
 }
 
+.scrollable {
+  overflow: auto;
+
+  .is-touch-device & {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 #cart {
   .transition;
   position: absolute;
@@ -159,6 +168,8 @@ a {
 
   h3 {
     .transition;
+    border-bottom: 1px solid @border-color;
+    flex: 0 0 auto;
   }
 
   main.product & {
@@ -166,9 +177,8 @@ a {
     transform: translateX(-80%);
 
     h3 {
-      opacity: 0;
+      color: transparent;
     }
-
   }
 }
 
@@ -177,9 +187,6 @@ a {
   flex-wrap: wrap;
   align-content: flex-start;
   margin-right: -1px;
-  border-top: 1px solid @border-color;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
   flex: 1;
 
   .product-snippet {
