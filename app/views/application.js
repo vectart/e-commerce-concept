@@ -9,7 +9,11 @@ export default Ember.View.extend({
   }.property('controller.currentPath'),
 
   isTouchDevice: function () {
-    return !!("ontouchstart" in window) || window.navigator.msMaxTouchPoints > 0;
+    if ('navigator' in window) {
+      return !!("ontouchstart" in window) || window.navigator.msMaxTouchPoints > 0;
+    }
+
+    return false;
   }.property(),
 
   isNotTouchDevice: Ember.computed.not('isTouchDevice')
