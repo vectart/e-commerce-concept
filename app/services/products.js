@@ -1,4 +1,6 @@
-[
+import Ember from 'ember';
+
+var products = [
   {
     "id": "w",
     "name": "W Lounge Chair in Orange Tweed",
@@ -61,4 +63,18 @@
     "name": "Baxton Studio Levison Gray Linen Modern Accent Chair",
     "price": 340
   }
-]
+];
+
+var fuse = new Fuse(products, { keys: ['name'] });
+
+export default Ember.ArrayController.extend(Ember.PromiseProxyMixin, {
+  promise: new Ember.RSVP.Promise(function (resolve) {
+    resolve(products);
+  }),
+
+  search: function (keyword) {
+    if (fuse) {
+      return fuse.search(keyword);
+    }
+  }
+});
