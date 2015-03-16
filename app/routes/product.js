@@ -11,6 +11,7 @@ export default Ember.Route.extend({
   },
 
   render: function () {
+    console.log('Render product route');
     this._super.apply(this, arguments);
     Ember.run.next(function () {
       this.set('controller.isActive', true);
